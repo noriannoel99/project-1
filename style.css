@@ -1,0 +1,414 @@
+body {
+  background-color: black;
+  color: rgb(207, 207, 207);
+  width: 1440px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 10vh;
+  font-size: 18px;
+}
+
+header > div:first-child {
+  text-align: left;
+  margin-left: 35px;
+}
+
+.Navigation-menu {
+  text-align: right;
+  display: flex;
+  margin-right: 35px;
+}
+
+.Navigation-menu div {
+  margin-right: 15px;
+}
+
+.Navigation-menu:hover div {
+  cursor: pointer;
+}
+
+.hamburger-menu .line {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(207, 207, 207);
+  margin: 5px;
+  display: none;
+}
+
+#hero {
+  margin-top: 100px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+  margin-top: 200px;
+}
+
+#hero div {
+  display: flex;
+}
+
+.hero-1,
+.hero-3 {
+  font-size: 150px;
+}
+
+.hero-2 {
+  width: 650px;
+  height: 70px;
+  background-color: rgb(207, 207, 207);
+  border-radius: 40px;
+  font-size: 25px;
+  color: black;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hero-2 div {
+  animation: move 6s linear infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.box,
+.box-2 {
+  margin-top: 40px;
+  width: 150px;
+  height: 100px;
+  background-color: rgb(207, 207, 207);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle,
+.circle-2 {
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 650px;
+  height: 100vh;
+  font-size: 100px;
+  margin: 0 auto;
+}
+
+.picture {
+  transform: scale(0.7);
+  margin-top: -90vh;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  height: 100vh;
+}
+
+#about p {
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+#about div {
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+#project {
+  height: 100vh;
+}
+
+.top {
+  font-size: 120px;
+  padding-top: 50px;
+  text-align: center;
+  z-index: 3;
+}
+
+#project .bottom {
+  overflow-y: hidden;
+  height: 80vh;
+  white-space: nowrap;
+}
+
+#project .bottom .project-column {
+  display: inline-block;
+  margin-top: 10vh;
+  margin-left: 10px;
+  width: 25vh;
+  height: 60vh;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+}
+
+#project .bottom .project-column img {
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+}
+
+#project .bottom .project-column p {
+  display: none;
+  margin-top: -10vh;
+  text-align: center;
+}
+
+#project .bottom .project-column:hover p {
+  display: block;
+}
+
+#project .bottom .project-column span {
+  display: none;
+  margin-top: -10vh;
+  text-align: center;
+}
+
+#project .bottom .project-column.project-column.active span {
+  display: block;
+  margin-top: 0vh;
+}
+
+#project .bottom .project-column:hover {
+  transform: scale(1.2);
+  margin-left: 20px;
+  margin-right: 20px;
+  z-index: 2;
+}
+
+#project .bottom .project-column div {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  z-index: 3;
+}
+
+#project .bottom .project-column:hover div {
+  display: block;
+}
+
+#project .bottom .project-column.active {
+  width: 60vh;
+  height: 60vh;
+  z-index: 4;
+}
+
+#skills {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#skills .bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo:hover .profiency {
+  display: block;
+}
+
+.logo .profiency {
+  display: none;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  height: 20vh;
+  width: 20vh;
+  transition: all 0s ease-in-out;
+  z-index: 1;
+  align-items: center;
+}
+
+.logo:hover {
+  height: 25vh;
+  width: 25vh;
+  z-index: 2;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#contact {
+  padding-top: 100px;
+  height: 100vh;
+}
+
+form {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: auto;
+}
+
+label,
+input,
+textarea {
+  margin: 10px 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 18px;
+  background-color: rgba(207, 207, 207, 0.7);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: black;
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  margin-top: 30px;
+  padding: 10px;
+  border: none;
+  background-color: rgba(207, 207, 207, 0.7);
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: rgba(207, 207, 207, 0.8);
+}
+
+#contact {
+  text-align: center;
+}
+
+#contact ul {
+  margin-top: 50px;
+  list-style: none;
+  padding: 0;
+  font-size: 30px;
+}
+
+#contact li {
+  margin: 10px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.picture {
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    width: 80vh;
+  }
+
+  header {
+    height: 8vh;
+    font-size: 16px;
+  }
+
+  header > div:first-child {
+    margin-left: 10px;
+    font-size: 25px;
+  }
+
+  .Navigation-menu {
+    display: none;
+  }
+
+  #hero {
+    transform: scale(0.7);
+  }
+
+  #about {
+    width: 60vh;
+  }
+
+  #project {
+    height: 100vh;
+    margin-top: 70vh;
+  }
+
+  .top {
+    font-size: 80px;
+    margin-top: 10vh;
+    text-align: center;
+    padding-top: 0px;
+  }
+
+  .project-column {
+    font-size: 10px;
+  }
+
+  #project .bottom .project-column img {
+    border-radius: 80px;
+  }
+
+  #contact {
+    width: 65vh;
+    margin-left: 6vh;
+  }
+}
