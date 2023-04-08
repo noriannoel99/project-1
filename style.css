@@ -169,7 +169,7 @@ header > div:first-child {
   display: inline-block;
   margin-top: 10vh;
   margin-left: 10px;
-  width: 25vh;
+  width: 25vw;
   height: 60vh;
   transition: all 0.5s ease-in-out;
   position: relative;
@@ -229,7 +229,7 @@ header > div:first-child {
 }
 
 #project .bottom .project-column.active {
-  width: 60vh;
+  width: 60vw;
   height: 60vh;
   z-index: 4;
 }
@@ -261,7 +261,7 @@ header > div:first-child {
 
 .logo {
   height: 20vh;
-  width: 20vh;
+  width: 20vw;
   transition: all 0s ease-in-out;
   z-index: 1;
   align-items: center;
@@ -269,7 +269,7 @@ header > div:first-child {
 
 .logo:hover {
   height: 25vh;
-  width: 25vh;
+  width: 25vw;
   z-index: 2;
 }
 
@@ -362,7 +362,11 @@ a {
 
 @media only screen and (max-width: 480px) {
   body {
-    width: 80vh;
+    width: 70vw;
+  }
+
+  .picture {
+    display: none;
   }
 
   header {
@@ -380,20 +384,21 @@ a {
   }
 
   #hero {
-    transform: scale(0.7);
+    transform: scale(0.5);
+    margin-top: 10vh;
   }
 
   #about {
-    width: 60vh;
+    width: 60vw;
   }
 
   #project {
     height: 100vh;
-    margin-top: 70vh;
+    margin-top: 100vh;
   }
 
   .top {
-    font-size: 80px;
+    font-size: 50px;
     margin-top: 10vh;
     text-align: center;
     padding-top: 0px;
@@ -408,7 +413,7 @@ a {
   }
 
   #contact {
-    width: 65vh;
-    margin-left: 6vh;
+    width: 65vw;
+    margin-left: 0vw;
   }
 }

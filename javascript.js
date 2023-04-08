@@ -1,3 +1,8 @@
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  section.scrollIntoView({ behavior: "smooth" });
+}
+
 const box = document.querySelector(".box");
 const circle = document.querySelector(".circle");
 const box2 = document.querySelector(".box-2");
